@@ -1,0 +1,23 @@
+{
+  "name": "freefuelcoin",
+  "version": "1.0.0",
+  "description": "A ERC20 Ethereum Token",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/papandas/FreeFuelCoin.git"
+  },
+  "author": "Papan Das <hexoindia@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/papandas/FreeFuelCoin/issues"
+  },
+  "homepage": "https://github.com/papandas/FreeFuelCoin#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
