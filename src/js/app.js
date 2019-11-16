@@ -80,9 +80,11 @@ App = {
           
           $('#ethAccount').empty();
           $('#ethAccount').html(`Wallet Address: <a href="https://ropsten.etherscan.io/address/${App.account}" target="_blank">${App.account.slice(0, 12)}...${App.account.slice(-8)}</a>`)
+
+          App.LoadLandingPage();
         }
 
-        App.LoadLandingPage();
+        
 
       } else {
         console.error("--Error--", err)
