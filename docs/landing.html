@@ -34,10 +34,241 @@
     <div class="col col-6">
         <div class="row">
             <div class="col col-4">
-                Total Supply
+                Token Total Supply:
             </div>
             <div id="totalSupply" class="col col-8 font-weight-bold"></div>
         </div>
     </div>
 
+</div>
+
+<div class="row">
+    <div class="col col-6">
+        <div class="row">
+            <div class="col col-4">
+                My Token Balance:
+            </div>
+            <div id="tokenBalance" class="col col-8 font-weight-bold"></div>
+        </div>
+    </div>
+
+    <div class="col col-6">
+        <div class="row">
+            <div class="col col-4">
+                Permissing To Mint:
+            </div>
+            <div id="permissionToMint" class="col col-8 font-weight-bold"></div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col col-6">
+        <div class="row">
+            <div class="col col-4">
+                Allowance Token:
+            </div>
+            <div id="tokenAllowance" class="col col-8 font-weight-bold"></div>
+        </div>
+    </div>
+
+    <div class="col col-6">
+        <div class="row">
+            <div class="col col-4">
+                ##########:
+            </div>
+            <div class="col col-8 font-weight-bold"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col col-6">
+        <div class="row">
+            <div class="col col-4">
+                ############:
+            </div>
+            <div id="" class="col col-8 font-weight-bold"></div>
+        </div>
+    </div>
+
+    <div class="col col-6">
+        <div class="row">
+            <div class="col col-4">
+                ############:
+            </div>
+            <div id="" class="col col-8 font-weight-bold"></div>
+        </div>
+    </div>
+</div>
+
+<div id="minter" class="row">
+    <div class="col col-6">
+        <div class="row">
+            <div class="col col-3">
+                <span class="mx-2">Add Minter:</span>
+            </div>
+            <div class="col col-6">
+                <input type="text" id="addMinterWalletAddress" class="form-control form-control-sm mt-1"
+                    placeholder="Wallet Address">
+            </div>
+            <div class="col col-3">
+                <center>
+                    <button class="btn btn-primary btn-sm" onclick="App.saveChangeMinter(); return false;"><i
+                            class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-6">
+        <div class="row">
+            <div class="col col-3">
+                <span class="align-middle">Mint Token:</span>
+            </div>
+            <div class="col col-6">
+                <div class="row">
+                    <div class="col col-8">
+                        <input type="text" id="toAccount" class="form-control form-control-sm mt-1"
+                            placeholder="Wallet Address">
+                    </div>
+                    <div class="col col-4">
+                        <input type="text" id="mintTokenTF" class="form-control form-control-sm mt-1"
+                            placeholder="Value">
+                    </div>
+                </div>
+            </div>
+            <div class="col col-3">
+                <center>
+                    <button class="btn btn-primary btn-sm" onclick="App.saveMintToken(); return false;"><i
+                            class="fas fa-coins"></i> Mint</button>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-6">
+        <div class="row">
+            <div class="col col-3">
+                <span class="mx-2">Burn Token:</span>
+            </div>
+            <div class="col col-6">
+                <input type="text" id="burnTokenTF" class="form-control form-control-sm mt-1" placeholder="Value">
+            </div>
+            <div class="col col-3">
+                <center>
+                    <button class="btn btn-danger btn-sm" onclick="App.saveBurnToken(); return false;"><i
+                            class="fas fa-fire"></i> Burn</button>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-6">
+        <div class="row">
+            <div class="col col-3">
+                <span class="mx-2">Set Fee:</span>
+            </div>
+            <div class="col col-4">
+                <input type="text" id="setFeeValue" class="form-control form-control-sm mt-1" placeholder="Value"
+                    value="0">
+            </div>
+            <div class="col col-5">
+                <center>
+                    <button class="btn btn-primary btn-sm" onclick="App.saveSetFee(); return false;">
+                        <i class="fa fa-money" aria-hidden="true"></i> Set Fee
+                    </button>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-6">
+        <div class="row">
+
+            <div class="col col-3">
+                Allowance-Approval:
+            </div>
+
+            <div class="col col-4">
+                <input type="text" id="ApproveWalletAddress" class="form-control form-control-sm mt-1"
+                    placeholder="Wallet Address">
+            </div>
+
+            <div class="col col-2">
+                <input type="text" id="ApproveValue" class="form-control form-control-sm mt-1" placeholder="Value">
+            </div>
+
+            <div class="col col-3">
+                <center>
+                    <button class="btn btn-primary btn-sm" onclick="App.saveApprove(); return false;">
+                        <i class="fa fa-check" aria-hidden="true"></i> Approve
+                    </button>
+                </center>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>
+
+<hr />
+
+<div class="row">
+    <div class="col col-12">
+        <div class="row">
+            <div class="col">
+                <h3>Transfer Token</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-6">
+                <input type="text" class="form-control mt-2" id="tokenToWalletAddress" placeholder="Wallet Address">
+            </div>
+            <div class="col col-3">
+                <input type="text" class="form-control mt-2" id="tokenTransferValue" placeholder="Token Value">
+            </div>
+            <div class="col col-3">
+                <center>
+                    <button class="btn btn-success" onclick="App.saveTransferToken(); return false;"><i
+                            class="fas fa-exchange-alt"></i> Transfer</button>
+                </center>
+            </div>
+        </div>
+        <!--<div class="row">
+            <div class="col float-right">
+                <div id="progressBar" class="ldBar" data-preset="stripe" style="width: 100%; height: 70px;"></div>
+            </div>
+            <div class="col font-weight-bold">
+
+            </div>
+        </div>-->
+    </div>
+</div>
+
+<div id="allowanceTokenTransfer" class="row">
+    <div class="col col-12">
+        <div class="row">
+            <div class="col">
+                <h3>Allowance Transfer Token</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-6">
+                <input type="text" class="form-control mt-2" id="allowTokenToWalletAddress" placeholder="Wallet Address">
+            </div>
+            <div class="col col-3">
+                <input type="text" class="form-control mt-2" id="allowTokenTransferValue" placeholder="Value">
+            </div>
+            <div class="col col-3">
+                <center>
+                    <button class="btn btn-success" onclick="App.saveAllowanceTokenTransfer(); return false;"><i
+                            class="fas fa-exchange-alt"></i> Transfer</button>
+                </center>
+            </div>
+        </div>
+    </div>
 </div>
